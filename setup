@@ -5,7 +5,7 @@ mkdir -p "$XDG_CONFIG_HOME"/nixpkg
 
 ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
-ln -sf "$PWD/config.nix" "$XDG_CONFIG_HOME"/nixpkgs/config.nix
+ln -sf "$PWD/nixpkgs" "$XDG_CONFIG_HOME"/nixpkgs
 ln -sf "$PWD/zellij" "$XDG_CONFIG_HOME"/zellij
 
 nix-env -iA nixpkgs.myPackages
