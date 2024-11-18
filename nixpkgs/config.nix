@@ -3,6 +3,7 @@
     myPackages = pkgs.buildEnv {
       name = "coulton-toolset";
       paths = [
+        alacritty
         neovim
         ripgrep
         lazygit

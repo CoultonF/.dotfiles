@@ -1,0 +1,11 @@
+[env]
+term="alacritty"
+[font]
+normal = { family = "Hack Nerd Font"}
+size=13
+[window]
+startup_mode = "Maximized"
+[general]
+import = [
+    "~/.config/alacritty/catppuccin-mocha.toml"
+]
