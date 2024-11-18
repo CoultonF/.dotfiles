@@ -5,7 +5,9 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 export TMUX_CONF="$XDG_CONFIG_HOME/tmux/tmux.conf"
 
-eval "$(starship init bash)"
+if command -v starship &> /dev/null; then
+  eval "$(starship init bash)"
+fi
 
 IS_IN_IDE=0
 if [[ "$TERM_PROGRAM" == "vscode" || -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
@@ -16,5 +18,5 @@ if [ "${IS_IN_IDE}" != "1" ]; then
   export ZELLIJ_AUTO_ATTACH=true
   # We *are* interactive, and we are not in an IDE, so if we are not already
   # in tmux, start it.
-  eval "$(zellij setup --generate-auto-start bash)"
+  eval "$(zellij --generate-auto-start bash)"
 fi
