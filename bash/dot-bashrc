@@ -12,6 +12,8 @@ if [[ "$TERM_PROGRAM" == "vscode" || -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
   IS_IN_IDE=1
 fi
 if [ "${IS_IN_IDE}" != "1" ]; then
+  export ZELLIJ_AUTO_EXIT=true
+  export ZELLIJ_AUTO_ATTACH=true
   # We *are* interactive, and we are not in an IDE, so if we are not already
   # in tmux, start it.
   eval "$(zellij setup --generate-auto-start bash)"

@@ -1,0 +1,19 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+# Echo's the operating system, simplified to:
+# - osx
+# - ubuntu
+get_os() {
+  # Identify the operating system.
+  local un=$(uname -a)
+  os="unknown"
+  if [[ "$un" =~ [Dd]arwin ]]; then
+    echo "osx"
+  elif [[ "$un" =~ [Uu]buntu ]]; then
+    echo "ubuntu"
+  else
+    echo "ubuntu"
+    exit 1
+  fi
+}
+[[ $(get_os) == 'osx' ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ -r ~/.bashrc ]] && . ~/.bashrc
