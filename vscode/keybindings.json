@@ -1,0 +1,203 @@
+[
+  // Navigation
+  {
+    "command": "workbench.action.navigateLeft",
+    "key": "ctrl-h"
+  },
+  {
+    "command": "workbench.action.navigateRight",
+    "key": "ctrl-l"
+  },
+  {
+    "command": "workbench.action.navigateUp",
+    "key": "ctrl-k"
+  },
+  {
+    "command": "workbench.action.navigateDown",
+    "key": "ctrl-j"
+  },
+  {
+    "command": "workbench.action.navigateRight",
+    "key": "space x",
+    "when": "sideBarFocus && !inputFocus && filesExplorerFocus"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "space x",
+    "when": "sideBarFocus && !inputFocus && !filesExplorerFocus"
+  },
+  {
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "key": "escape",
+    "when": "auxiliaryBarFocus"
+  },
+  // {
+  //   "command": "workbench.action.nextEditorInGroup",
+  //   "key": "shift-l",
+  //   "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  // },
+  {
+    "command": "workbench.action.nextEditorInGroup",
+    "key": "tab",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  },
+  // {
+  //   "command": "workbench.action.previousEditorInGroup",
+  //   "key": "shift-h",
+  //   "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  // },
+  {
+    "command": "workbench.action.previousEditorInGroup",
+    "key": "shift-tab",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  },
+  // Coding
+  {
+    "command": "editor.action.moveLinesDownAction",
+    "key": "shift-j",
+    "when": "vim.mode == 'VisualLine' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.moveLinesUpAction",
+    "key": "shift-k",
+    "when": "vim.mode == 'VisualLine' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.showHover",
+    "key": "shift-H",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "key": "ctrl-n",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  },
+  // File Tree Commands
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.copy",
+    "key": "c",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.paste",
+    "key": "p",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.cut",
+    "key": "x",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "explorer.newFile",
+    "key": "o",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "explorer.openToSide",
+    "key": "s",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "args": {
+      "commands": [
+        "workbench.action.splitEditorDown",
+        "explorer.openAndPassFocus",
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    "command": "runCommands",
+    "key": "shift-s",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "command": "explorer.openAndPassFocus",
+    "key": "enter",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "command": "list.togglExpand",
+    "key": "enter",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "command": "workbench.action.terminal.toggleTerminal",
+    "key": "ctrl-`",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  // {
+  //   "command": "editor.action.formatDocument",
+  //   "key": "= a p",
+  //   "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && vim.mode == 'Normal'"
+  // },
+  // Debugging
+  {
+    "command": "runCommands",
+    "args": {
+      "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"]
+    },
+    "key": "space b d",
+    "when": "sideBarFocus && view.workbench.debug.breakPointsView.visible"
+  },
+  {
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.view.debug",
+        "workbench.debug.action.focusVariablesView"
+      ]
+    },
+    "key": "space d d",
+    "when": "sideBarFocus && !inputFocus"
+  },
+  // Tests
+  {
+    "command": "runCommands",
+    "args": {
+      "commands": ["testing.runSelected"]
+    },
+    "key": "ctrl-enter",
+    "when": "sideBarFocus && workbench.view.testing.active"
+  },
+  {
+    "command": "diffEditor.switchSide",
+    "key": "tab",
+    "when": "inDiffEditor"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "multiDiffEditor.collapseAll"
+  }
+
+  // SQL Developer
+  // {
+  //   "key": "space r",
+  //   "command": "sqldeveloper.worksheet.runStatement",
+  //   "when": "vim.mode == 'Normal' && editorTextFocus && sqldeveloper.activeEditorType == 'sqlWorksheet' && sqldeveloper.worksheet.activeWorksheetId not in 'sqldeveloper.worksheet.busyWorksheetIds'"
+  // },
+  // {
+  //   "key": "space q",
+  //   "command": "sqldeveloper.connection.folder.open.worksheet",
+  //   "when": "vim.mode == 'Normal' && editorTextFocus"
+  // },
+  // {
+  //   "key": "space s",
+  //   "command": "workbench.view.extension.sqldeveloper-explorer",
+  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
+  // },
+  // {
+  //   "key": "space s",
+  //   "command": "workbench.view.extension.sqldeveloper-explorer",
+  //   "when": "sideBarFocus && !inputFocus"
+  // }
+]
