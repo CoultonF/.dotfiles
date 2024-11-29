@@ -51,6 +51,22 @@
     "key": "shift-tab",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
+  // Terminal Sizing
+  {
+    "command": "workbench.action.terminal.resizePaneUp",
+    "key": "ctrl-shift-k",
+    "when": "panelFocus"
+  },
+  {
+    "command": "workbench.action.terminal.resizePaneDown",
+    "key": "ctrl-shift-j",
+    "when": "panelFocus"
+  },
+  {
+    "command": "workbench.action.terminal.killAll",
+    "key": "ctrl-shift-d",
+    "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen"
+  },
   // Coding
   {
     "command": "editor.action.moveLinesDownAction",
