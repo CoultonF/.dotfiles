@@ -1,9 +1,16 @@
 {
+  // make the window's titlebar use the workbench colors
+  "window.titleBarStyle": "custom",
   "security.workspace.trust.untrustedFiles": "open",
   "[search-result]": {
     "editor.lineNumbers": "on"
   },
   "vim.normalModeKeyBindings": [
+    
+    {
+      "before": ["<leader>", "z", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
+    },
     //Navigation
     {
       "commands": ["workbench.action.showAllEditors"],
@@ -63,6 +70,22 @@
     {
       "commands": ["workbench.action.closeEditorsToTheRight"],
       "before": ["<leader>", "c", "l"]
+    },
+    {
+      "commands": ["workbench.action.splitEditorLeft"],
+      "before": ["<leader>", "c", "J"]
+    },
+    {
+      "commands": ["workbench.action.splitEditorRight"],
+      "before": ["<leader>", "c", "L"]
+    },
+    {
+      "commands": ["workbench.action.splitEditorDown"],
+      "before": ["<leader>", "c", "J"]
+    },
+    {
+      "commands": ["workbench.action.splitEditorUp"],
+      "before": ["<leader>", "c", "K"]
     },
     {
       "commands": ["editor.action.rename"],
@@ -181,6 +204,10 @@
       "before": ["<leader>", "h"],
       "commands": ["workbench.action.moveEditorToLeftGroup"],
       "silent": true
+    },
+    {
+      "before": ["C-K"],
+      "commands": []
     },
     {
       "before": ["<C-q>"],
@@ -377,6 +404,7 @@
     "editor.formatOnType": true
   },
   "vim.commandLineModeKeyBindingsNonRecursive": [],
+  "terminal.external.windowsExec": "C:\\Users\\cfraser5\\AppData\\Local\\Programs\\Git\\git-bash.exe",
   "accessibility.dimUnfocused.enabled": true,
-  "window.newWindowProfile": "Vim",
+  "window.newWindowProfile": "Vim"
 }
