@@ -63,9 +63,17 @@
     "when": "panelFocus"
   },
   {
-    "command": "workbench.action.terminal.killAll",
-    "key": "ctrl-shift-d",
-    "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen"
+    "command": "workbench.action.togglePanel",
+    "key": "ctrl-shift-d"
+  },
+  {
+    "command": "workbench.action.nextPanelView",
+    "key": "ctrl-shift-l",
+    "when": "!editorTextFocus"
+  },
+  {
+    "command": "workbench.action.previousPanelView",
+    "key": "ctrl-shift-h"
   },
   // Coding
   {
@@ -193,6 +201,43 @@
   {
     "key": "ctrl+shift+e",
     "command": "multiDiffEditor.collapseAll"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-selectAllSearchEditorMatches",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+; ctrl+shift+l",
+    "command": "-testing.coverageLastRun"
+  },
+  {
+    "key": "ctrl+k ctrl+shift+l",
+    "command": "-editor.toggleFoldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-addCursorsAtSearchResults",
+    "when": "fileMatchOrMatchFocus && searchViewletVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+l",
+    "command": "-workbench.action.quickchat.toggle",
+    "when": "chatIsEnabled"
   }
 
   // SQL Developer
