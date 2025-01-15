@@ -1,0 +1,7 @@
+IS_IN_IDE=0
+if [[ "$TERM_PROGRAM" == "vscode" || -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
+  IS_IN_IDE=1
+fi
+if [ "${IS_IN_IDE}" != "1" ]; then
+    wsl --cd ~
+fi
