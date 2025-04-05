@@ -31,6 +31,11 @@
     "key": "escape",
     "when": "auxiliaryBarFocus"
   },
+  {
+    "command": "workbench.action.focusFirstEditorGroup",
+    "key": "escape",
+    "when": "!editorFocus && view.augment-chat.visible"
+  },
   // {
   //   "command": "workbench.action.nextEditorInGroup",
   //   "key": "shift-l",
@@ -168,7 +173,9 @@
   {
     "command": "runCommands",
     "args": {
-      "commands": ["workbench.debug.viewlet.action.removeAllBreakpoints"]
+      "commands": [
+        "workbench.debug.viewlet.action.removeAllBreakpoints"
+      ]
     },
     "key": "space b d",
     "when": "sideBarFocus && view.workbench.debug.breakPointsView.visible"
@@ -188,7 +195,9 @@
   {
     "command": "runCommands",
     "args": {
-      "commands": ["testing.runSelected"]
+      "commands": [
+        "testing.runSelected"
+      ]
     },
     "key": "ctrl-enter",
     "when": "sideBarFocus && workbench.view.testing.active"
@@ -230,35 +239,16 @@
     "command": "-editor.action.deleteLines"
   },
   {
+    "key": "ctrl+shift+j",
+    "command": "search.action.focusNextSearchResult"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "search.action.focusPreviousSearchResult"
+  },
+  {
     "key": "ctrl+shift+l",
     "command": "-addCursorsAtSearchResults",
     "when": "fileMatchOrMatchFocus && searchViewletVisible"
-  },
-  {
-    "key": "ctrl+shift+alt+l",
-    "command": "-workbench.action.quickchat.toggle",
-    "when": "chatIsEnabled"
   }
-
-  // SQL Developer
-  // {
-  //   "key": "space r",
-  //   "command": "sqldeveloper.worksheet.runStatement",
-  //   "when": "vim.mode == 'Normal' && editorTextFocus && sqldeveloper.activeEditorType == 'sqlWorksheet' && sqldeveloper.worksheet.activeWorksheetId not in 'sqldeveloper.worksheet.busyWorksheetIds'"
-  // },
-  // {
-  //   "key": "space q",
-  //   "command": "sqldeveloper.connection.folder.open.worksheet",
-  //   "when": "vim.mode == 'Normal' && editorTextFocus"
-  // },
-  // {
-  //   "key": "space s",
-  //   "command": "workbench.view.extension.sqldeveloper-explorer",
-  //   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
-  // },
-  // {
-  //   "key": "space s",
-  //   "command": "workbench.view.extension.sqldeveloper-explorer",
-  //   "when": "sideBarFocus && !inputFocus"
-  // }
 ]
