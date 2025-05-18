@@ -1,0 +1,7 @@
+\.git
+\.gitignore
+\.gitsubmodules
+scripts
+vscode
+dbeaver
+bash
